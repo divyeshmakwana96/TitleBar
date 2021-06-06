@@ -133,6 +133,15 @@ public class TitleBarViewController: UIViewController {
     }
 }
 
+// MARK:- TitleBarViewController tabbar
+extension TitleBarViewController {
+    public override var tabBarItem: UITabBarItem! {
+        get { return rootViewController.tabBarItem }
+        set { rootViewController.tabBarItem = newValue }
+    }
+}
+
+
 // MARK:- UIViewController Accessibility
 public extension UIViewController {
     var titleBarViewController: TitleBarViewController? { firstParent(of: TitleBarViewController.self) }
