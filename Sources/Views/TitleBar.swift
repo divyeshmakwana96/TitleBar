@@ -49,6 +49,11 @@ public class TitleBar: UIView {
         set { grabberContainerView.isHidden = newValue }
     }
     
+    public var dividerColor: UIColor? {
+        get { divider.color }
+        set { divider.color = newValue }
+    }
+    
     public var accessoryView: UIView? {
         didSet {
             if let oldAccessoryView = oldValue {
