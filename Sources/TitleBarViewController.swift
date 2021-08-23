@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class TitleBarViewController: UIViewController {
+open class TitleBarViewController: UIViewController {
     
     /// Titlebar
     public let titleBar = TitleBar()
@@ -17,7 +17,7 @@ public class TitleBarViewController: UIViewController {
     public let rootViewController: UIViewController
     
     /// Background view. . Defaults style is prominent blur
-    public var backgroundView: UIView? = UIVisualEffectView(effect: UIBlurEffect(style: .prominent)) {
+    open var backgroundView: UIView? = UIVisualEffectView(effect: UIBlurEffect(style: .prominent)) {
         didSet {
             updateBackgroundViewIfNeeded(oldView: oldValue)
         }
@@ -42,7 +42,7 @@ public class TitleBarViewController: UIViewController {
         addChild(rootViewController)
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
