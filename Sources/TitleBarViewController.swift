@@ -90,7 +90,7 @@ open class TitleBarViewController: UIViewController {
         
         // observe title update
         titleBar.title = rootViewController.title
-        titleToken = rootViewController.observe(\.title, changeHandler: { [weak self] (_, change) in
+        titleToken = rootViewController.observe(\.title, options: [.new], changeHandler: { [weak self] (_, change) in
             guard let title = change.newValue else { return }
             self?.titleBar.title = title
         })
